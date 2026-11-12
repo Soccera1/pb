@@ -259,7 +259,7 @@ static void render_progress() {
 
 	// note: could overflow without 64 bit GCC
 	#if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 202311L && BITINT_MAXWIDTH >= 128
-	unsigned long long pct_copied = ((_BitInt(128)cur_copied * 100) / total;
+	unsigned long long pct_copied = ((unsigned _BitInt(128)cur_copied * 100) / total;
 	#elif defined(__GNUC__) && defined(__SIZEOF_INT128__)
 	unsigned long long pct_copied = ((__uint128_t)cur_copied * 100) / total;
 	#else
