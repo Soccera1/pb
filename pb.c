@@ -208,7 +208,7 @@ done:
 void draw_block_row(unsigned long long pct_copied) {
 	const char *block_7_8 = "▉";
 	for (int i = 0; i < g_columns - 2; i++) {
-		int pct = i * 100 / g_columns;
+		int pct = i * 100 / (g_columns - 2);
 
 		if (pct < pct_copied) {
 			fprintf(stderr, "%s", GREEN);
